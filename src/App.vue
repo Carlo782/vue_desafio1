@@ -1,16 +1,20 @@
 <template>
  <div>
+  
   <Autos/>
+
  </div>
 </template>
 
 <script>
-import Autos from './components/Autos.vue'
+ import Autos from './components/Autos.vue'
+
 
 export default {
   name: 'App',
   components: {
     Autos
+
   }
 }
 </script>

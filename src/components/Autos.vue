@@ -1,8 +1,11 @@
 <template>
-
 <div v-for="auto in autos" :key="auto.index">
-{{ auto }}
+  {{ auto }}
+
+
+
 </div>
+
 
 </template>
 
@@ -13,7 +16,9 @@ export default{
     name:'Autos_A',
     data(){
         return{
-            autos:[]
+            autos:[],
+            
+
         }
     },
 
@@ -26,7 +31,11 @@ export default{
 
 
         })
-    }
+    },
+    methods:{
+     
+
+    },
 
 }
 
