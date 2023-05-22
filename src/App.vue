@@ -1,20 +1,21 @@
 <template>
  <div>
-  
   <Autos/>
+  <!-- <Filtro/> -->
 
  </div>
 </template>
 
 <script>
  import Autos from './components/Autos.vue'
+//  import Filtro from './components/Filtro.vue'
 
 
 export default {
   name: 'App',
   components: {
     Autos
-
+    // Filtro
   }
 }
 </script>
