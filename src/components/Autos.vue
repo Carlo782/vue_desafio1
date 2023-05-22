@@ -15,7 +15,7 @@
           <th scope="col">Turbo</th>
           <th scope="col">Type</th>
           <th scope="col">Motor</th>
-          <th scope="col">Popularity</th>
+          <th scope="col">Popularidad</th>
           <th scope="col">Cabinas</th>
           <th scope="col">Sunroof</th>
         </tr>
@@ -30,6 +30,7 @@
           <td>{{auto.turbo}}</td>
           <td>{{auto.tipo}}</td>
           <td>{{auto.motor}}</td>
+          <td>{{auto.popularidad}}</td>
           <td>{{auto.cabinas}}</td>
           <td>{{auto.sunroof}}</td>
         </tr>
@@ -50,14 +51,12 @@ export default{
         return{
             autos:[],
             cantidad:0,
-            
-
         }
     },
     
     methods:{
     generar(){
-      axios.get("http://localhost:8080/automoviles/generar?cantidad=${this.cantidad}")
+        axios.get(`http://localhost:8080/automoviles/generar?cantidad=${(this.cantidad-1)}`)
         .then(response => {
           this.autos = response.data;
         })
